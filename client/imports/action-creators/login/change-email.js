@@ -5,7 +5,7 @@ export default function changeEmail(event) {
   event.preventDefault();
 
   return {
-    type: actionTypeConstants.form.changeEmail,
+    type: actionTypeConstants.login.changeEmail,
     value: event.target.value
   };
 }

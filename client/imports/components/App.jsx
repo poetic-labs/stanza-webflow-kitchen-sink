@@ -1,8 +1,8 @@
 /* eslint-disable */
 import React from 'react';
 import Face from './Face';
-import Form from './Form';
 import Index from './Index';
+import Loading from './Loading';
 import Login from './Login';
 import { Stack } from 'react-super-components';
 import { Provider } from 'react-redux';
@@ -12,10 +12,11 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <Stack indexKey="path" activeLayerIndex={this.props.path}>
+        <Stack index="path">
           <Face index="face" />
-          <Form index="login" />
           <Index index="" />
+          <Loading index="loading" />
+          <Login index="login" />
         </Stack>
       </Provider>
       );

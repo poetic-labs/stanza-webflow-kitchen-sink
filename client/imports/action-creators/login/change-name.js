@@ -5,7 +5,7 @@ export default function changeName(event) {
   event.preventDefault();
 
   return {
-    type: actionTypeConstants.form.changeName,
+    type: actionTypeConstants.login.changeName,
     value: event.target.value
   };
 }

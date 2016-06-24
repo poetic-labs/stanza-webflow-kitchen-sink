@@ -1,12 +1,12 @@
 /* eslint-disable */
 import React from 'react';
 
-class Index extends React.Component {
+class Loading extends React.Component {
   render() {
     return (
       <div>
         <div className="background">
-          <h1>Trent's Index</h1>
+          <h1>loading...</h1>
         </div>
       </div>
       );
@@ -14,4 +14,4 @@ class Index extends React.Component {
 }
 ;
 
-export default Index;
+export default Loading;

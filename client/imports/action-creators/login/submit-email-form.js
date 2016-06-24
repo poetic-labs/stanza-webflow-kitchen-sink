@@ -5,7 +5,7 @@ export default function submitEmailForm(event) {
   event.preventDefault();
 
   return {
-    type: actionTypeConstants.form.submitEmailForm,
+    type: actionTypeConstants.login.submitEmailForm,
     value: event.target.value
   };
 }
