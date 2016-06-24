@@ -12,7 +12,7 @@ class App extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <Stack index="path">
+        <Stack indexKey="path" activeLayerIndex={this.props.path}>
           <Face index="face" />
           <Index index="" />
           <Loading index="loading" />
