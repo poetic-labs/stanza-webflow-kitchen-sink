@@ -6,7 +6,7 @@ class Index extends React.Component {
     return (
       <div>
         <div className="background">
-          <h1>Trent's Project</h1>
+          <h1>INDEX</h1>
         </div>
       </div>
       );
