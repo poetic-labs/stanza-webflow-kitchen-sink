@@ -27,7 +27,6 @@ const additionalActionTypeConstants = helpers.getAdditional({
 
 
 const actionTypeConstants = Object.assign(baseActionTypeConstants, additionalActionTypeConstants);
-console.log('actionTypeConstants: ', actionTypeConstants);
 
 const customize = custom['action-type-constants/index'] || ((x) => x);
 

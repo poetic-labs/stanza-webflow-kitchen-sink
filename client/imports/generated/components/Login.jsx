@@ -2,6 +2,8 @@
 import React from 'react';
 import { connect as reduxConnect } from 'react-redux';
 import action from '../action-creators/index';
+import custom from '../../custom/index';
+import store from '../store';
 
 class Login extends React.Component {
   render() {

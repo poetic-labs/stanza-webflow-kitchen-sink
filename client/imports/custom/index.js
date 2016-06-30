@@ -1,15 +1,19 @@
+/* eslint-disable */
 import React from 'react';
 import store from '../generated/store';
+import { Accounts } from 'meteor/accounts-base';
+import actionTypeConstants from '../generated/action-type-constants/index';
 
 export default {
-  'components/App': (self, dependencies) => self,
+  'components/App': (Self, dependencies) => Self,
   'components/Login': (Self, dependencies) => {
     console.log('========== components/Login ==========');
 
     class CustomLogin extends React.Component {
+      componentDidMount() {
+        console.log('CustomLogin did mount!');
+      }
       render() {
-        console.log('store.getState().login: ', store.getState().login);
-
         return (
           <Self ref="Login" />
         );
@@ -17,6 +21,38 @@ export default {
     }
 
     return CustomLogin;
+  },
+  'action-creators/index': (Self, dependencies) => {
+    console.log('========== action-creators/index ==========');
+    return Self;
+  },
+  'action-creators/login/index': (Self, dependencies) => {
+    console.log('========== action-creators/login/index ==========');
+    return Self;
+  },
+  'action-creators/login/change-email': (Self, dependencies) => {
+    console.log('========== action-creators/login/change-email ==========');
+    return Self;
+  },
+  'action-creators/login/change-name': (Self, dependencies) => {
+    console.log('========== action-creators/login/change-name ==========');
+    return Self;
+  },
+  'action-creators/login/submit-email-form': (Self, dependencies) => {
+    console.log('========== action-creators/login/submit-email-form ==========');
+
+    return function submitEmailForm(event) {
+      event.preventDefault();
+
+      const { name, email } = store.getState().login;
+
+      Accounts.createUser({ email, password: name });
+
+      return {
+        type: actionTypeConstants.login.submitEmailForm,
+        value: event.target.value,
+      };
+    };
   },
   'action-type-constants/index': (Self, dependencies) => {
     console.log('========== action-type-constants/index ==========');
@@ -36,22 +72,6 @@ export default {
   },
   'action-type-constants/login/submit-email-form': (Self, dependencies) => {
     console.log('========== action-type-constants/login/submit-email-form ==========');
-    return Self;
-  },
-  'action-creators/index': (Self, dependencies) => {
-    console.log('========== action-creators/index ==========');
-    return Self;
-  },
-  'action-creators/login/change-email': (Self, dependencies) => {
-    console.log('========== action-creators/login/change-email ==========');
-    return Self;
-  },
-  'action-creators/login/change-name': (Self, dependencies) => {
-    console.log('========== action-creators/login/change-name ==========');
-    return Self;
-  },
-  'action-creators/login/submit-email-form': (Self, dependencies) => {
-    console.log('========== action-creators/login/submit-email-form ==========');
     return Self;
   },
   'reducers/index': (Self, dependencies) => {
