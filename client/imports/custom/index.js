@@ -18,6 +18,22 @@ export default {
 
     return CustomLogin;
   },
+  'action-creators/index': (Self, dependencies) => {
+    console.log('========== action-creators/index ==========');
+    return Self;
+  },
+  'action-creators/login/change-email': (Self, dependencies) => {
+    console.log('========== action-creators/login/change-email ==========');
+    return Self;
+  },
+  'action-creators/login/change-name': (Self, dependencies) => {
+    console.log('========== action-creators/login/change-name ==========');
+    return Self;
+  },
+  'action-creators/login/submit-email-form': (Self, dependencies) => {
+    console.log('========== action-creators/login/submit-email-form ==========');
+    return Self;
+  },
   'reducers/index': (Self, dependencies) => {
     console.log('========== reducers/index ==========');
     return Self;

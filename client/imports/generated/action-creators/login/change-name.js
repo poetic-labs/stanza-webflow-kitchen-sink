@@ -1,7 +1,8 @@
 /* eslint-disable */
 import actionTypeConstants from '../../action-type-constants/index';
+import custom from '../../../custom/index';
 
-export default function changeName(event) {
+const actionCreator = function changeName(event) {
   event.preventDefault();
 
   return {
@@ -9,3 +10,7 @@ export default function changeName(event) {
     value: event.target.value
   };
 }
+
+const customize = custom['action-creators/login/change-name'] || ((x) => x);
+
+export default customize(actionCreator, { actionTypeConstants });
