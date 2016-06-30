@@ -18,6 +18,26 @@ export default {
 
     return CustomLogin;
   },
+  'action-type-constants/index': (Self, dependencies) => {
+    console.log('========== action-type-constants/index ==========');
+    return Self;
+  },
+  'action-type-constants/login/index': (Self, dependencies) => {
+    console.log('========== action-type-constants/login/index ==========');
+    return Self;
+  },
+  'action-type-constants/login/change-email': (Self, dependencies) => {
+    console.log('========== action-type-constants/login/change-email ==========');
+    return Self;
+  },
+  'action-type-constants/login/change-name': (Self, dependencies) => {
+    console.log('========== action-type-constants/login/change-name ==========');
+    return Self;
+  },
+  'action-type-constants/login/submit-email-form': (Self, dependencies) => {
+    console.log('========== action-type-constants/login/submit-email-form ==========');
+    return Self;
+  },
   'action-creators/index': (Self, dependencies) => {
     console.log('========== action-creators/index ==========');
     return Self;
