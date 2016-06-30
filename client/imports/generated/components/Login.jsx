@@ -71,4 +71,6 @@ const LoginWithRedux = reduxConnect(
   }
 )(Login);
 
-export default LoginWithRedux;
+const customize = custom['components/Login'] || ((x) => {x});
+
+export default customize(LoginWithRedux, {});
