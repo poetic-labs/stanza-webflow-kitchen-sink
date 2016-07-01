@@ -1,7 +1,5 @@
 /* eslint-disable */
-import LoginOverrides from './login/index';
-
-console.log('LoginOverrides: ', LoginOverrides);
+import LoginOverrides from './overrides/Login';
 
 export default {
   ...LoginOverrides,
