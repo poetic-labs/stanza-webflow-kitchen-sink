@@ -60,6 +60,7 @@ class Login extends React.Component {
   }
 }
 ;
+
 const LoginWithRedux = reduxConnect(
   (state) => ({
     'state.login.name': state.login.name,
